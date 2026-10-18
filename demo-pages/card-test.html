@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drishti AI Demo – Credit Card Test</title>
+  <style>
+    body { font-family: sans-serif; background: #f5f5f5; padding: 40px; max-width: 500px; margin: 0 auto; }
+    .notice { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 12px; margin-bottom: 24px; font-size: 13px; }
+    .card-form { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    label { display: block; font-size: 12px; font-weight: 700; color: #666; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+    input { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    button { width: 100%; padding: 14px; background: #1a73e8; color: white; border: none; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="notice">⚠️ SYNTHETIC TEST — Fake card numbers for Drishti AI privacy detection. Not real payment data.</div>
+
+  <div class="card-form">
+    <h2 style="margin: 0 0 20px; font-size:18px;">Payment Information</h2>
+
+    <label for="card-holder">Card Holder Name</label>
+    <input type="text" id="card-holder" name="card_holder" value="PRIYA SHARMA" autocomplete="cc-name" />
+
+    <label for="card-number">Card Number</label>
+    <input type="text" id="card-number" name="card_number" value="4532 0151 1283 0366" autocomplete="cc-number" maxlength="19" />
+
+    <div class="row">
+      <div>
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" name="expiry" value="12/27" autocomplete="cc-exp" placeholder="MM/YY" />
+      </div>
+      <div>
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" value="456" autocomplete="cc-csc" maxlength="4" />
+      </div>
+    </div>
+
+    <label for="billing-address">Billing Address</label>
+    <input type="text" id="billing-address" name="billing_address" value="123 Residency Road, Bengaluru 560025" />
+
+    <button type="button">Pay ₹5,000</button>
+  </div>
+
+  <div style="margin-top:16px; font-size:12px; color:#888;">
+    Expected detections: credit_card (cc-number), name (cc-name), address. CVV: high-sensitivity.
+    Test card: 4532015112830366 (Visa test number).
+  </div>
+</body>
+</html>

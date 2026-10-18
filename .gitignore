@@ -1,0 +1,30 @@
+﻿# ─── Python / Backend ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.db
+*.db-shm
+*.db-wal
+.pytest_cache/
+.mypy_cache/
+
+# ─── Node / Extension ──────────────────────────────────────────────────────
+node_modules/
+extension/dist/
+extension/coverage/
+*.tsbuildinfo
+
+# ─── OS ────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── IDE ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ─── Logs / Secrets ─────────────────────────────────────────────────────────
+*.log
+.env.local
+.env.production

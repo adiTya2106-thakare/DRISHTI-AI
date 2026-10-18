@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drishti AI Demo – Complex Layout Test</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0; margin: 0; }
+    .topbar { background: #1a1a2e; color: white; padding: 12px 24px; display: flex; align-items: center; gap: 16px; }
+    .topbar h1 { margin: 0; font-size: 16px; }
+    .layout { display: grid; grid-template-columns: 240px 1fr; min-height: calc(100vh - 48px); }
+    .sidebar { background: #16213e; color: #aaa; padding: 20px; }
+    .sidebar h3 { color: #00d4ff; font-size: 13px; text-transform: uppercase; margin: 0 0 16px; }
+    .sidebar a { display: block; color: #aaa; text-decoration: none; padding: 8px 0; font-size: 13px; border-bottom: 1px solid #1a2d4a; }
+    .main { padding: 24px; overflow: auto; }
+    .notice { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 12px; margin-bottom: 16px; font-size: 13px; }
+    .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    label { font-weight: 600; font-size: 13px; color: #555; }
+    input, textarea { width: 100%; padding: 8px; margin: 6px 0 14px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+    .deadline { font-size: 18px; font-weight: 700; color: #d32f2f; }
+    .apply-btn { display: inline-block; padding: 12px 28px; background: #1a73e8; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    td, th { border: 1px solid #ddd; padding: 8px 12px; }
+    th { background: #f8f9fa; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <h1>ISRO Research Portal — Applicant Dashboard</h1>
+    <span style="margin-left:auto; font-size:12px; color:#8899bb;">Logged in as: testuser@example.com</span>
+  </div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Navigation</h3>
+      <a href="#">My Applications</a>
+      <a href="#">Profile</a>
+      <a href="#">Documents</a>
+      <a href="#">Messages</a>
+      <a href="#">Settings</a>
+      <div style="margin-top:24px; font-size:11px; color:#445;">
+        <div>Session ID: sess_abc123def</div>
+        <div>Last login: 09:42 AM</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="notice">⚠️ SYNTHETIC TEST PAGE — Complex layout for Drishti AI visual grounding evaluation.</div>
+
+      <!-- Important deadline info -->
+      <div class="card">
+        <h2>Fellowship Application Status</h2>
+        <table>
+          <tr><th>Programme</th><th>Deadline</th><th>Status</th><th>Action</th></tr>
+          <tr>
+            <td>Research Fellowship 2025</td>
+            <td class="deadline">31 March 2025</td>
+            <td><span style="color:green">●</span> Open</td>
+            <td><a class="apply-btn" href="#apply-section" id="start-application">Apply Now</a></td>
+          </tr>
+          <tr>
+            <td>Internship Programme</td>
+            <td>15 April 2025</td>
+            <td><span style="color:green">●</span> Open</td>
+            <td><a href="#" style="color:#1a73e8">Apply</a></td>
+          </tr>
+          <tr>
+            <td>Post-Doctoral Fellowship</td>
+            <td style="color:#888">Closed</td>
+            <td><span style="color:red">●</span> Closed</td>
+            <td style="color:#888">—</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Nested form section -->
+      <div class="card" id="apply-section">
+        <h2>Quick Application Form</h2>
+        <!-- Tab-like interface (complex layout) -->
+        <div style="display:flex; gap:8px; margin-bottom:16px;">
+          <button style="background:#1a73e8; color:white; border:none; padding:8px 16px; border-radius:4px; cursor:pointer;">Personal</button>
+          <button style="background:#f0f0f0; border:1px solid #ddd; padding:8px 16px; border-radius:4px; cursor:pointer;">Education</button>
+          <button style="background:#f0f0f0; border:1px solid #ddd; padding:8px 16px; border-radius:4px; cursor:pointer;">Documents</button>
+        </div>
+        <div>
+          <label for="full-name-c">Full Name</label>
+          <input type="text" id="full-name-c" value="Rahul Kumar" />
+          <label for="email-c">Email Address</label>
+          <input type="email" id="email-c" value="rahul.kumar@iit.ac.in" />
+          <label for="phone-c">Phone</label>
+          <input type="tel" id="phone-c" value="9988776655" />
+          <!-- Hidden within a collapsed section -->
+          <details>
+            <summary style="cursor:pointer; font-weight:600; margin-bottom:8px;">Financial Details (expand)</summary>
+            <label for="acc-c">Bank Account</label>
+            <input type="text" id="acc-c" name="bank_account" value="987654321098" />
+            <label for="pan-c">PAN Number</label>
+            <input type="text" id="pan-c" name="pan" value="PQRST5678U" />
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

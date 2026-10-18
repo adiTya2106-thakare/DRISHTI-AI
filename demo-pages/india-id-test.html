@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drishti AI Demo – India ID Test</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f4ff; padding: 40px; max-width: 600px; margin: 0 auto; }
+    .notice { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 12px; margin-bottom: 24px; font-size: 13px; }
+    .form-card { background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; }
+    label { display: block; font-weight: 600; font-size: 13px; color: #333; margin-bottom: 6px; }
+    input { width: 100%; padding: 10px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+    button { padding: 10px 20px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="notice">⚠️ SYNTHETIC TEST — All data is fake. India-specific ID fields for Drishti AI testing.</div>
+
+  <div class="form-card">
+    <h2>🇮🇳 India KYC Verification</h2>
+    <label for="aadhaar1">Aadhaar Number</label>
+    <input type="text" id="aadhaar1" name="aadhaar" value="9876 5432 1098" maxlength="14" />
+    <label for="pan1">PAN Number</label>
+    <input type="text" id="pan1" name="pan" value="WXYZP9876Q" />
+    <label for="voter">Voter ID</label>
+    <input type="text" id="voter" name="voter_id" value="ABC1234567" />
+    <label for="passport">Passport Number</label>
+    <input type="text" id="passport" name="passport" value="P1234567" />
+    <label for="driving">Driving License</label>
+    <input type="text" id="driving" name="driving_license" value="KA051234567890" />
+  </div>
+
+  <div class="form-card">
+    <h2>Contact Details</h2>
+    <label for="mobile">Mobile (linked to Aadhaar)</label>
+    <input type="tel" id="mobile" name="mobile" value="9876543210" />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" value="testuser@example.in" />
+  </div>
+
+  <button type="button">Verify KYC</button>
+  <div style="margin-top:16px; font-size:12px; color:#888;">
+    Expected: aadhaar, pan, phone, email. Voter/passport/driving: heuristic only.
+  </div>
+</body>
+</html>
